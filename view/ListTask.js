@@ -8,7 +8,7 @@ export default function ListTask() {
         TaskGet();
     },[tasks]);
 
-    const TaskGet = ()=>{
+    const TaskGet =  async  ()=>{
         fetch('https://633f9f8ae44b83bc73bdc814.mockapi.io/api/task/tasks')
         .then((res) => res.json())
         .then((result) => {

@@ -7,15 +7,16 @@ export default function AddTasks() {
     const addTask = (nameTask) =>{
         const tasks = {
             "name":nameTask,
-            "createdAT":new Date()
+            "createdAT":new Date(),
         }
+        console.log(tasks);
         fetch('https://633f9f8ae44b83bc73bdc814.mockapi.io/api/task/tasks', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: tasks
+            body: JSON.stringify(tasks)
 });
     }
   return (
